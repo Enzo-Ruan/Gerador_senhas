@@ -14,7 +14,12 @@ int main()
 
     for(i = 0; i< PW_LEN; i++)
     {
-        char letra = rand()%(SORT_MAX - SORT_MIN +1) + SORT_MIN;
-        printf("%c", letra);
+        int letra = rand()%('z' - 'a' +1) +'a';
+        if(rand()%2 != 0)
+        {
+            letra += 'A' - 'a'; 
+        }
+
+        printf("%c", (char)letra);
     }
 }
